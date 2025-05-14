@@ -1,0 +1,162 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Top Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.controls label {
+  font-weight: bold;
+}
+
+.controls input,
+.controls select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.controls button:nth-child(1) { background-color: #2ecc71; }
+.controls button:nth-child(2) { background-color: #3498db; }
+.controls button:nth-child(3) { background-color: #e74c3c; }
+
+.controls button:hover { opacity: 0.9; }
+
+/* Table */
+.table-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Info Row */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.ready-queue,
+.executing,
+.utilization {
+  flex: 1;
+  padding: 5px;
+}
+
+.ready-queue span,
+.executing span,
+.utilization span {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #3498db;
+  color: white;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/* Gantt Chart */
+#ganttChart {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+  min-height: 60px;
+}
+
+#ganttChart div {
+  padding: 10px;
+  min-width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 4px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+/* Color coding for process IDs */
+#ganttChart div[data-pid="1"] { background: #3498db; }
+#ganttChart div[data-pid="2"] { background: #2ecc71; }
+#ganttChart div[data-pid="3"] { background: #e67e22; }
+#ganttChart div[data-pid="4"] { background: #9b59b6; }
+#ganttChart div[data-pid="5"] { background: #e74c3c; }
+#ganttChart div[data-pid="6"] { background: #1abc9c; }
+#ganttChart div[data-pid="7"] { background: #34495e; }
+#ganttChart div[data-pid="8"] { background: #f1c40f; }
+#ganttChart div[data-pid="9"] { background: #7f8c8d; }
+#ganttChart div[data-pid="10"] { background: #c0392b; }
+
+@media (max-width: 768px) {
+  .info-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
